@@ -1,31 +1,4 @@
-**The Garden Fresh Box Web Application**
-
-**Table of Contents**
-
-The Project Goals 
-
-[User Tools](#__RefHeading__916_1159691747)
-
-[Host Site Tools (Only available to host site coordinators and GFB
-admins)](#__RefHeading__918_1159691747)
-
-[Admin Tools (Only available to GFB admins)](#__RefHeading__920_1159691747)
-
-[About the Project/Pyramid](#__RefHeading__693_1159691747)
-
-[How to add a new page](#__RefHeading__695_1159691747)
-
-[How to start the server](#__RefHeading__697_1159691747)
-
-[Database schema](#__RefHeading__699_1159691747)
-
-[How the database is associated](#__RefHeading__701_1159691747)
-
-[How the editing timer works (cannot change after 1st Friday of month)](#__RefHeading__703_1159691747)
-
-[Still To Do](#__RefHeading__1026_1159691747)
-
-[Notes](#__RefHeading__1028_1159691747)
+*****The Garden Fresh Box Web Application*****
 
 *The Project Goals*
 -------------------
@@ -35,7 +8,7 @@ working website suited to carry out any administrative task relating to
 Garden Fresh Box. Currently the only system available is to call in via
 phone to order, and customers must pay with cash when they arrive to
 pick up a pre-ordered box. By sometime in 2015 the plan is to have a
-website that will allow customers to order***Garden Fresh Boxes***from
+website that will allow customers to order ***Garden Fresh Boxes*** from
 their preferred host site, as well as use PayPal to pay for their box
 online before they ever go to pick it up. The website will also allow
 for other users to donate cash via PayPal, and the database will
@@ -68,7 +41,7 @@ inside-and-out by 2015.*
 -   **Contact –**This page contains contact info for the Guelph
     Community Health Centre
 
--   ### User Tools
+-   ### **User Tools**
 
     -   **User orders –**Lists only orders made by user who is logged in
 
@@ -81,7 +54,7 @@ inside-and-out by 2015.*
     -   **Edit user information –**User who is logged in may change
         profile information
 
--   ### Host Site Tools (Only available to host site coordinators and GFB admins) 
+-   ### **Host Site Tools** (Only available to host site coordinators and GFB admins) 
 
     -   **Manage orders for a particular host site –**Edit/add orders
         associated with a particular host site
@@ -89,7 +62,7 @@ inside-and-out by 2015.*
     -   **Edit details (contact info) for particular host site –**Edit
         info associated with host site such as hours of operation
 
--   ### Admin Tools (Only available to GFB admins)
+-   ### **Admin Tools** (Only available to GFB admins)
 
     -   **Manage user accounts –**Manage accounts of users who have
         signed up; may also be used to assign administrator or host site
@@ -183,17 +156,18 @@ are basically HTML with some added tricks
 
 4.  *Sometimes new models must be created if adding new functionality*
 
-*How to start the server
+*How to start the server*
 ----------------------------------------------------------------------
 
-1.  *Setup the python development server:****\$python setup.py
-    [develop]***
+1.  *Setup the python server: ****$python setup.py
+    [develop|production]***
 
 2.  *Start the server with the WSGI (in this case its Pserver until
-    Gunicorn or more appropriate gateway is setup): ****$paster serve
-    --reload development.ini***
+    Gunicorn or more appropriate gateway is setup): ***$paster serve
+    --reload development.ini**
 
-*How to switch over to production machine (ideally)
+*How to switch over to production machine (ideally)*
+----------------------------------------------------------------------
 
 1.  *Tar the project, and untar on the production machine*
 
