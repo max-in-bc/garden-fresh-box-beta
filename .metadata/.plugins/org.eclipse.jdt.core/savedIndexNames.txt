@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/home/edgard/eclipse-workspaces/gfb/.metadata/.plugins/org.eclipse.jdt.core
