@@ -8,7 +8,7 @@ working website suited to carry out any administrative task relating to
 Garden Fresh Box. Currently the only system available is to call in via
 phone to order, and customers must pay with cash when they arrive to
 pick up a pre-ordered box. By sometime in 2015 the plan is to have a
-website that will allow customers to order ***Garden Fresh Boxes** from
+website that will allow customers to order ***Garden Fresh Boxes*** from
 their preferred host site, as well as use PayPal to pay for their box
 online before they ever go to pick it up. The website will also allow
 for other users to donate cash via PayPal, and the database will
