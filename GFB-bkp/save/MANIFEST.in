@@ -1,3 +1,0 @@
-include gardenfreshbox/config/deployment.ini_tmpl
-recursive-include gardenfreshbox/public *
-recursive-include gardenfreshbox/templates *
