@@ -1,4 +1,4 @@
-*****The Garden Fresh Box Web Application*****
+***The Garden Fresh Box Web Application***
 
 *The Project Goals*
 -------------------
@@ -8,7 +8,7 @@ working website suited to carry out any administrative task relating to
 Garden Fresh Box. Currently the only system available is to call in via
 phone to order, and customers must pay with cash when they arrive to
 pick up a pre-ordered box. By sometime in 2015 the plan is to have a
-website that will allow customers to order ***Garden Fresh Boxes*** from
+website that will allow customers to order* **Garden Fresh Boxes** *from
 their preferred host site, as well as use PayPal to pay for their box
 online before they ever go to pick it up. The website will also allow
 for other users to donate cash via PayPal, and the database will
@@ -98,7 +98,7 @@ also contains a description for each page of the website**
 based largely on the fact that Pylons Pyramid Python framework uses this
 framework as well. For more info on Pylons Pyramid and MVC principles
 please visit their site
-at: **[**http://docs.pylonsproject.org/en/latehest/docs/pyramid.html***](http://docs.pylonsproject.org/en/latest/docs/pyramid.html)*.*
+at:* [**http://docs.pylonsproject.org/en/latehest/docs/pyramid.html**](http://docs.pylonsproject.org/en/latest/docs/pyramid.html).
 
 The project itself is based on one of the basic Pyramid scaffolds, and has
 the following basic structure:
@@ -152,7 +152,7 @@ are basically HTML with some added tricks
     to the new page (in most cases adding it to the sidebar.mako)*
 
 3.  *Add the routing information to routing.py in
-    the **config** folder*
+    the ***config*** folder*
 
 4.  *Sometimes new models must be created if adding new functionality*
 
@@ -171,10 +171,10 @@ are basically HTML with some added tricks
 
 1.  *Tar the project, and untar on the production machine*
 
-2.  Change the links to the php files located in
+2.  *Change the links to the php files located in
     models/GFBDatabaseController.py for the login verification to the
     appropriate full links on the production machine (a quick search for
-    “php” in the document will find them for you)
+    “php” in the document will find them for you)*
 
 3.  *Install all needed, Apache, Pyramid, PHP, etc.*
 
@@ -203,7 +203,7 @@ boxes, in the future perhaps admin should be given opportunity to set
 past dates.
 
 In the sale.py **model** the calculation is done in the method
-called 	*toDistList**
+called 	**toDistList**
 
 *Still To Do*
 -------------
