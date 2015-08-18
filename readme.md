@@ -235,8 +235,26 @@ called 	**toDistList**
 
 -   *Paypal IPN*
 
--   *Beta testing*
+-   *Fonts
 
+-   *CASL legislation standards
+
+-   *Email server setup
+-       *Email non-paid recipients 
+-       *Email paid recipients
+-       *Email newsletter signups
+
+-   *Write instructions for forms (instructions button maybe)
+
+-   *Donation form on our website populates DonateNow site form
+
+-   *Back-end cleanup*
+
+-   *Move back-end to production machine*
+
+-   *Archival mechanisms if needed*
+
+-   *Beta testing*
 
 *Notes*
 -------
