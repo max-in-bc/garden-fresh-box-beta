@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;GFB/gardenfreshbox/public/js/manageHostSites.js&apos; to &apos;manageHS.js&apos;" description="Rename resource &apos;manageHostSites.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="gardenfreshbox/public/js/manageHostSites.js" name="manageHS.js" stamp="1425162160967" updateReferences="true"/>
-</session>

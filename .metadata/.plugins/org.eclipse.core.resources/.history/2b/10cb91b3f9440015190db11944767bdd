@@ -1,2 +1,0 @@
- proc = subprocess.Popen("php -f gardenfreshbox/model/AuthorizeUser.php '" + password + "' '" + result[0] + "'", shell=True, stdout=subprocess.PIPE)
-        is_valid = proc.stdout.read()

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;GFB/gardenfreshbox/templates/tools/confirmOrder.php&apos;" deleteContents="false" description="Delete resource &apos;GFB/gardenfreshbox/templates/tools/confirmOrder.php&apos;" element1="/GFB/gardenfreshbox/templates/tools/confirmOrder.php" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1439827129977"/>
-</session>

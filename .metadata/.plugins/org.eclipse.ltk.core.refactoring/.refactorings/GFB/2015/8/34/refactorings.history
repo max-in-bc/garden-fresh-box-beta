@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;GFB/gardenfreshbox/model/ipn.php&apos; to &apos;paypalipn.php&apos;" description="Rename resource &apos;ipn.php&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="gardenfreshbox/model/ipn.php" name="paypalipn.php" stamp="1439828378368" updateReferences="true"/>
-</session>
