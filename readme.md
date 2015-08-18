@@ -152,7 +152,7 @@ are basically HTML with some added tricks
     to the new page (in most cases adding it to the sidebar.mako)*
 
 3.  *Add the routing information to routing.py in
-    the ***config*** folder*
+    the* **config** *folder*
 
 4.  *Sometimes new models must be created if adding new functionality*
 
