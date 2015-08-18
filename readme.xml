@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<article lang="">
+  <para>The Garden Fresh Box Web Application</para>
+  <para>Front-end and Back-end engineer: Max Gardiner</para>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para/>
+  <para>Table of Contents</para>
+  <para>
+    <link linkend="">Pages Included        2</link>
+  </para>
+  <para>
+    <link linkend="">User Tools:        2</link>
+  </para>
+  <para>
+    <link linkend="">Host Site Tools (Only available to host site coordinators and GFB admins)        2</link>
+  </para>
+  <para>
+    <link linkend="">Admin Tools (Only available to GFB admins)        2</link>
+  </para>
+  <para>
+    <link linkend="">About the Project/Pyramid        4</link>
+  </para>
+  <para>
+    <link linkend="">How to add a new page        5</link>
+  </para>
+  <para>
+    <link linkend="">How to start the server in development mode (no production mode yet)        5</link>
+  </para>
+  <para>
+    <link linkend="">Database schema        6</link>
+  </para>
+  <para>
+    <link linkend="">How the database is associated        6</link>
+  </para>
+  <para>
+    <link linkend="">How the editing timer works (cannot change after 1st Friday of month)        7</link>
+  </para>
+  <para>
+    <link linkend="">Still To Do        8</link>
+  </para>
+  <para>
+    <link linkend="">Notes        9</link>
+  </para>
+  <para>
+    <anchor id="__RefHeading__689_1159691747"/>
+    <emphasis>The Project Goals</emphasis>
+  </para>
+  <para>
+    <emphasis>The purpose of this project is to provide the GCHC clients with a working website suited to carry out any administrative task relating to Garden Fresh Box. Currently the only system available is to call in via phone to order, and customers must pay with cash when they arrive to pick up a pre-ordered box. By sometime in 2015 the plan is to have a website that will allow customers to order </emphasis>
+    <emphasis>Garden Fresh Boxes</emphasis>
+    <emphasis> from their preferred host site, as well as use PayPal to pay for their box online before they ever go to pick it up. The website will also allow for other users to donate cash via PayPal, and the database will store/offer automatically generated tax receipts over the federal minimum for charitable donations. Moreover, host sites will be able to use the website to review all donations and box orders for their specific site, for each specific pickup date, and they will be able to make changes/transfers therein. A master administrator (to be eventually controlled by a GCHC employee) will exist who will have access to all data from the project, including read/write access to host site and customer order information. The end goal of this project will be a preliminarily tested and working web application suited for properly organizing, administering, and maintaining the Garden Fresh Box project inside-and-out by 2015.</emphasis>
+  </para>
+  <para>
+    <anchor id="__RefHeading__691_1159691747"/>
+    <emphasis>Pages Included</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>Home – Home page with links</para>
+    </listitem>
+    <listitem>
+      <para>Information – Contains information on program, boxes, host sites, and pickup dates</para>
+    </listitem>
+    <listitem>
+      <para>Purchasing – A page for a user to place a box purchase using online order form</para>
+    </listitem>
+    <listitem>
+      <para>Donations – Currently linking to CanadaGives.org will eventually integrate with their API once it is updated</para>
+    </listitem>
+    <listitem>
+      <para>Contact – This page contains contact info for the Guelph Community Health Centre</para>
+    </listitem>
+    <listitem>
+      <para><anchor id="__RefHeading__916_1159691747"/>User Tools:</para>
+    </listitem>
+    <listitem>
+      <para><anchor id="__RefHeading__918_1159691747"/>Host Site Tools (Only available to host site coordinators and GFB admins)</para>
+    </listitem>
+    <listitem>
+      <para><anchor id="__RefHeading__920_1159691747"/>Admin Tools (Only available to GFB admins)</para>
+    </listitem>
+  </orderedlist>
+  <para/>
+  <para>*NOTE: See config/routing.py to get a list of all of the files created for the project (some are under construction or unused); list also contains a description for each page of the website</para>
+  <para>
+    <anchor id="__RefHeading__693_1159691747"/>
+    <emphasis>About the Project/Pyramid</emphasis>
+  </para>
+  <para>
+    <emphasis>This project is built using Model-View-Controller principles, this is based largely on the fact that Pylons Pyramid Python framework uses this framework as well. For more info on Pylons Pyramid and MVC principles please visit their site at: </emphasis>
+    <ulink url="http://docs.pylonsproject.org/en/latest/docs/pyramid.html">
+      <emphasis>http://docs.pylonsproject.org/en/latehest/docs/pyramid.html</emphasis>
+    </ulink>
+    <emphasis> .</emphasis>
+  </para>
+  <para/>
+  <para><para/><inlinegraphic fileref="embedded:" width="3.3228inch" depth="5.0728inch"/>The project itself is based on one of the basic Pyramid scaffolds, and has the following basic structure:</para>
+  <para> GFB is the main project folder</para>
+  <para>the data and GardenFreshBox.egg-info are automatically generated and do not need to be changed by anyone</para>
+  <para>Inside the gardenfreshbox folder is where all of the project code resides:</para>
+  <para>config contains a number of Python configuration files (including routing table and some Pyramid setup)</para>
+  <para>controllers contains the Python MVC controllers for errors, hostsites, the index page, purchases, and users</para>
+  <para>lib contains globals and helper functions</para>
+  <para>model contains all of the models for the site cookie, user views, hostsite views, sale views, and all access to backend</para>
+  <para>public contains all data downloaded by user (css, images, js, etc.) </para>
+  <para>templates contains the web markup in the form of MAKO templates which are basically HTML with some added tricks</para>
+  <para/>
+  <orderedlist>
+    <listitem>
+      <para>the .ini files (like development.ini) are used by Pyramid to configure the server before launch</para>
+    </listitem>
+    <listitem>
+      <para>README.txt contains quick info on how to run the development server</para>
+    </listitem>
+    <listitem>
+      <para>requirements.txt contains a list of applications installed on the production machine</para>
+    </listitem>
+    <listitem>
+      <para>setup.cfg contains more Pyramid configuration</para>
+    </listitem>
+    <listitem>
+      <para>setup.py is the Python/Paster setup wrapper that must get run on each development machine before the server can start (startserver.sh is a quick run of dev server)</para>
+    </listitem>
+  </orderedlist>
+  <para/>
+  <para>
+    <anchor id="__RefHeading__695_1159691747"/>
+    <emphasis>How to add a new page</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>
+        <emphasis>Create the html/mako page(s) for the new page</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Add physical links to the existing mako templates which must link to the new page (in most cases adding it to the sidebar.mako)</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Add the routing information to routing.py in the </emphasis>
+        <emphasis>config </emphasis>
+        <emphasis>folder</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Sometimes new models must be created if adding new functionality</emphasis>
+      </para>
+    </listitem>
+  </orderedlist>
+  <para>
+    <anchor id="__RefHeading__697_1159691747"/>
+    <emphasis>How to start the server in development mode (no production mode yet)</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>
+        <emphasis>Setup the python development server: </emphasis>
+        <emphasis>$python setup.py [develop]</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Start the server with the WSGI (in this case its Pserver until Gunicorn or more appropriate gateway is setup): </emphasis>
+        <emphasis>$paster serve --reload development.ini </emphasis>
+      </para>
+    </listitem>
+  </orderedlist>
+  <para>
+    <emphasis>How to switch over to production machine (ideally)</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>
+        <emphasis>Tar the project, and untar on the production machine</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>Change the links to the php files located in models/GFBDatabaseController.py for the login verification to the appropriate full links on the production machine (a quick search for “php” in the document will find them for you)</para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Install all needed, Apache, Pyramid, PHP, etc.</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Run the project according to README.txt</emphasis>
+      </para>
+    </listitem>
+  </orderedlist>
+  <para>
+    <anchor id="__RefHeading__699_1159691747"/>
+    <emphasis>Database schema</emphasis>
+  </para>
+  <para>
+    <para/>
+    <inlinegraphic fileref="embedded:" width="6.5898inch" depth="6.2799inch"/>
+  </para>
+  <para>
+    <anchor id="__RefHeading__701_1159691747"/>
+    <emphasis>How the database is associated</emphasis>
+  </para>
+  <para>
+    <emphasis>Within the </emphasis>
+    <emphasis>model </emphasis>
+    <emphasis>folder there is a csv file with access information to the database. If the database is ever moved or changes IP then this is the file that must be changed to update the server. Unfortunately we had to remove database constraints so that the mobile developer and I could continue working with the same database during development, and the proper constraints have never been put back in place.</emphasis>
+  </para>
+  <para>
+    <anchor id="__RefHeading__703_1159691747"/>
+    <emphasis>How the editing timer works (cannot change after 1st Friday of month)</emphasis>
+  </para>
+  <para>
+    <anchor id="__RefHeading__705_1159691747"/>
+    <emphasis>As it stands right now users nor admins can change records after payment has been received, and users cannot change their orders after the first friday of the month.</emphasis>
+  </para>
+  <para>
+    <emphasis>The same thing goes for not listing past pickup dates in dropdown boxes, in the future perhaps admin should be given opportunity to set past dates.</emphasis>
+  </para>
+  <para>
+    <emphasis>In the sale.py </emphasis>
+    <emphasis>model </emphasis>
+    <emphasis>the calculation is done in the method called </emphasis>
+    <emphasis>toDistList</emphasis>
+  </para>
+  <para>
+    <anchor id="__RefHeading__1026_1159691747"/>
+    <emphasis>Still To Do</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>
+        <emphasis>Some sort of back-end sorting must be done to take care of archived orders once this system is used more, for example orders from 2012 and 2013 will not be displayed as readily as orders from 2015, etc.</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Integrate GCHC paypal info with Paypal button on orders</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Integrate GCHC CanadaGives info with donations page</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>The Voucher System</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Must have a way of notifying </emphasis>
+        <emphasis>pay in person </emphasis>
+        <emphasis>customers or customers who missed deadlines</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Error messages for orders that cannot be edited anymore due to time passed or payment received</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>A </emphasis>
+        <emphasis>forgot-your-password</emphasis>
+        <emphasis> page will be necessary but we will force them to change their password upon entering</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Cross site request forms (XSS</emphasis>
+        <emphasis>)</emphasis>
+        <emphasis> need to be looked over for security issues, someone else with more experience should look at my fixes</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>It is recommended that forms be validated in the backend as well</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Email server setup integrate with system</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Setup on production machine</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Purchase domain name (</emphasis>
+        <emphasis>gardenfreshbox.ca</emphasis>
+        <emphasis>) and associate it with production server</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Beta testing</emphasis>
+      </para>
+    </listitem>
+  </orderedlist>
+  <para/>
+  <para>
+    <anchor id="__RefHeading__1028_1159691747"/>
+    <emphasis>Notes</emphasis>
+  </para>
+  <orderedlist>
+    <listitem>
+      <para>
+        <emphasis>The passwords are hashed and salted using PHP's builtin abilities to do so</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Shellshock use of python command line security issues fixed</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Inputs to database are sanitized</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Penetration testing necessary still, as I AM NOT A SECURITY EXPERT</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Still waiting on a main logo for the header</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>Feedback from users will be nice because I have a feeling more instruction will be necessary for some of the pages especially admins</emphasis>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <emphasis>As it stands right now validation.js contains all validation javascript for forms, and each html file has it's own js file. I realize this is not properly compartmentalized but I did this for simplicitys sake, as this is my first major web application</emphasis>
+      </para>
+    </listitem>
+  </orderedlist>
+  <para/>
+  <para>                9</para>
+</article>
