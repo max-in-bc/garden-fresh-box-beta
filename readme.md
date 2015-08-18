@@ -142,6 +142,10 @@ are basically HTML with some added tricks
     each development machine before the server can start
     (**startserver.sh** is a quick run of dev server)
 
+*Database Schema*
+-----------------------
+ 
+![alt text](https://raw.githubusercontent.com/maxgardiner/Garden-Fresh-Box/master/Database%20Schema.png "Schema for Backend")
 
 *How to add a new page*
 -----------------------
