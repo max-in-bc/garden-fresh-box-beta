@@ -22,7 +22,7 @@ data from the project, including read/write access to host site and
 customer order information. The end goal of this project will be a
 preliminarily tested and working web application suited for properly
 organizing, administering, and maintaining the Garden Fresh Box project
-inside-and-out by 2015.
+inside-and-out by 2015.*
 
 *Pages Included* 
 ----------------
@@ -87,7 +87,7 @@ inside-and-out by 2015.
         example boxes that are listed on the info page
 
 
-**\*NOTE: ****See config/routing.py to get a list of all of the files
+\*NOTE: **See config/routing.py to get a list of all of the files
 created for the project (some are under construction or unused); list
 also contains a description for each page of the website**
 
@@ -98,7 +98,7 @@ also contains a description for each page of the website**
 based largely on the fact that Pylons Pyramid Python framework uses this
 framework as well. For more info on Pylons Pyramid and MVC principles
 please visit their site
-at: **[***http://docs.pylonsproject.org/en/latehest/docs/pyramid.html***](http://docs.pylonsproject.org/en/latest/docs/pyramid.html)*.*
+at: **[**http://docs.pylonsproject.org/en/latehest/docs/pyramid.html***](http://docs.pylonsproject.org/en/latest/docs/pyramid.html)*.*
 
 The project itself is based on one of the basic Pyramid scaffolds, and has
 the following basic structure:
@@ -159,11 +159,11 @@ are basically HTML with some added tricks
 *How to start the server*
 ----------------------------------------------------------------------
 
-1.  *Setup the python server: 
+1.  *Setup the python server:* 
 	**$python setup.py [develop|production]**
 
 2.  *Start the server with the WSGI (in this case its Pserver until
-    Gunicorn or more appropriate gateway is setup): 
+    Gunicorn or more appropriate gateway is setup):* 
 	**$paster serve --reload development.ini**
 
 *How to switch over to production machine (ideally)*
@@ -183,27 +183,27 @@ are basically HTML with some added tricks
 *How the database is associated* 
 --------------------------------
 
-*Within the **model** folder there is a csv file with access
+Within the **model** folder there is a csv file with access
 information to the database. If the database is ever moved or changes IP
 then this is the file that must be changed to update the server.
 Unfortunately we had to remove database constraints so that the mobile
 developer and I could continue working with the same database during
 development, and the proper constraints have never been put back in
-place.*
+place.
 
 *How the editing timer works*
 -----------------------------------------------------------------------
 
-*As it stands right now users nor admins can change records after
+As it stands right now users nor admins can change records after
 payment has been received, and users cannot change their orders after
-the first friday of the month.*
+the first friday of the month.
 
-*The same thing goes for not listing past pickup dates in dropdown
+The same thing goes for not listing past pickup dates in dropdown
 boxes, in the future perhaps admin should be given opportunity to set
-past dates.*
+past dates.
 
-*In the sale.py ***model** the calculation is done in the method
-called 	*toDistList***
+In the sale.py **model** the calculation is done in the method
+called 	*toDistList**
 
 *Still To Do*
 -------------
