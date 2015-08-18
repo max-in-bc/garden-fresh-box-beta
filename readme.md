@@ -8,7 +8,7 @@ working website suited to carry out any administrative task relating to
 Garden Fresh Box. Currently the only system available is to call in via
 phone to order, and customers must pay with cash when they arrive to
 pick up a pre-ordered box. By sometime in 2015 the plan is to have a
-website that will allow customers to order ***Garden Fresh Boxes*** from
+website that will allow customers to order **Garden Fresh Boxes* from
 their preferred host site, as well as use PayPal to pay for their box
 online before they ever go to pick it up. The website will also allow
 for other users to donate cash via PayPal, and the database will
@@ -22,7 +22,7 @@ data from the project, including read/write access to host site and
 customer order information. The end goal of this project will be a
 preliminarily tested and working web application suited for properly
 organizing, administering, and maintaining the Garden Fresh Box project
-inside-and-out by 2015.*
+inside-and-out by 2015.
 
 *Pages Included* 
 ----------------
@@ -98,7 +98,7 @@ also contains a description for each page of the website**
 based largely on the fact that Pylons Pyramid Python framework uses this
 framework as well. For more info on Pylons Pyramid and MVC principles
 please visit their site
-at: **[***http://docs.pylonsproject.org/en/latehest/docs/pyramid.html***](http://docs.pylonsproject.org/en/latest/docs/pyramid.html)**.*
+at: **[***http://docs.pylonsproject.org/en/latehest/docs/pyramid.html***](http://docs.pylonsproject.org/en/latest/docs/pyramid.html)*.*
 
 The project itself is based on one of the basic Pyramid scaffolds, and has
 the following basic structure:
@@ -152,19 +152,19 @@ are basically HTML with some added tricks
     to the new page (in most cases adding it to the sidebar.mako)*
 
 3.  *Add the routing information to routing.py in
-    the ****config**** folder*
+    the **config** folder*
 
 4.  *Sometimes new models must be created if adding new functionality*
 
 *How to start the server*
 ----------------------------------------------------------------------
 
-1.  *Setup the python server: ****$python setup.py
-    [develop|production]***
+1.  *Setup the python server: 
+	**$python setup.py [develop|production]**
 
 2.  *Start the server with the WSGI (in this case its Pserver until
-    Gunicorn or more appropriate gateway is setup): ***$paster serve
-    --reload development.ini**
+    Gunicorn or more appropriate gateway is setup): 
+	**$paster serve --reload development.ini**
 
 *How to switch over to production machine (ideally)*
 ----------------------------------------------------------------------
@@ -183,7 +183,7 @@ are basically HTML with some added tricks
 *How the database is associated* 
 --------------------------------
 
-*Within the ****model**** folder there is a csv file with access
+*Within the **model** folder there is a csv file with access
 information to the database. If the database is ever moved or changes IP
 then this is the file that must be changed to update the server.
 Unfortunately we had to remove database constraints so that the mobile
@@ -191,7 +191,7 @@ developer and I could continue working with the same database during
 development, and the proper constraints have never been put back in
 place.*
 
-*How the editing timer works
+*How the editing timer works*
 -----------------------------------------------------------------------
 
 *As it stands right now users nor admins can change records after
@@ -202,8 +202,8 @@ the first friday of the month.*
 boxes, in the future perhaps admin should be given opportunity to set
 past dates.*
 
-*In the sale.py ****model**** the calculation is done in the method
-called 	****toDistList***
+*In the sale.py ***model** the calculation is done in the method
+called 	*toDistList***
 
 *Still To Do*
 -------------
@@ -218,13 +218,13 @@ called 	****toDistList***
 
 -   ***The Voucher System***
 
--   *Must have a way of notifying ****pay in person**** customers or
+-   *Must have a way of notifying "pay in person" customers or
     customers who missed deadlines*
 
 -   *Error messages for orders that cannot be edited anymore due to time
     passed or payment received*
 
--   *A**** forgot-your-password**** page will be necessary but we will
+-   *A "forgot-your-password" page will be necessary but we will
     force them to change their password upon entering*
 
 -   *It is recommended that forms be validated in the backend as well*
