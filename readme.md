@@ -235,18 +235,18 @@ called 	**toDistList**
 
 -   *Paypal IPN*
 
--   *Fonts
+-   *Fonts*
 
--   *CASL legislation standards
+-   *CASL legislation standards*
 
--   *Email server setup
--       *Email non-paid recipients 
--       *Email paid recipients
--       *Email newsletter signups
+-   *Email server setup*
+-       ..*Email non-paid recipients* 
+-       ..*Email paid recipients*
+-       ..*Email newsletter signups*
 
--   *Write instructions for forms (instructions button maybe)
+-   *Write instructions for forms (instructions button maybe)*
 
--   *Donation form on our website populates DonateNow site form
+-   *Donation form on our website populates DonateNow site form*
 
 -   *Back-end cleanup*
 
